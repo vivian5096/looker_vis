@@ -23,7 +23,7 @@ looker.plugins.visualizations.add({
 
         // Throw errors and exit if the shape of the data isn't what this chart requires
         trial_uid_key = 'trials_denormalised.trial_uid'
-        if (queryResponse.fields.dimensions.find(d => d.name === trial_uid_key)) {
+        if (!queryResponse.fields.dimensions.find(d => d.name === trial_uid_key)) {
             this.addError({title: 'Invalid Input.', message: `This chart requires dimension - ${trial_uid_key}.`});
             return;
         }
