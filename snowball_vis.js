@@ -12,6 +12,8 @@ looker.plugins.visualizations.add({
         this.iframe = element.appendChild(document.createElement("iframe"));
         this.iframe.height="100%"
         this.iframe.width="100%"
+        const collections = document.getElementsByClassName('visualization-container')
+        console.log('Find visualization container', collections)
     },
 
 
